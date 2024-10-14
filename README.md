@@ -34,10 +34,10 @@ Para executar o projeto localmente, siga os passos abaixo:
    ```bash
    git clone https://github.com/balbino-z/plantei.git
 
-Deploy
+## Deploy
 O projeto está hospedado no Vercel. Você pode acessá-lo através do seguinte link: https://projetoplantei.vercel.app/
 
-Licença
+## Licença
 Este projeto é licenciado sob a MIT License.
 
 ### Como Usar
