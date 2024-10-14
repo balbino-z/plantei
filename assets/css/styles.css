@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #34495e;
+    background-color: #f0f0f0; /* Cor de fundo clara */
+    margin: 0; /* Remove margens padrão */
+}
+
+nav {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    padding: 15px 20px; /* Espaçamento interno */
+    display: flex; /* Usar flexbox para alinhamento */
+    justify-content: center; /* Centraliza os itens horizontalmente (desktop) */
+    align-items: center; /* Alinhamento vertical central */
+    position: fixed; /* Fixa a navbar no topo */
+    top: 0; /* Alinha ao topo da página */
+    width: 100%; /* Largura total */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para efeito de profundidade */
+    z-index: 1000; /* Garante que a navbar fique acima de outros elementos */
+}
+
+.menu {
+    display: flex; /* Exibe os itens da lista em linha */
+    flex-direction: row; /* Alinha os itens na horizontal */
+    justify-content: center; /* Centraliza os itens na navbar */
+}
+
+nav ul {
+    list-style: none; /* Remove marcadores de lista */
+    display: flex; /* Alinha os itens na horizontal */
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+nav ul li {
+    display: inline; /* Itens em linha */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: white; /* Cor do texto */
+    font-weight: bold; /* Negrito */
+    padding: 10px 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s, color 0.3s; /* Efeito de transição */
+}
+
+nav ul li a:hover {
+    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+    color: #ffffff; /* Cor do texto ao passar o mouse */
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 100px; /* Espaço acima da seção hero */
+}
+
+.hero img {
+    width: 150px; /* Tamanho da imagem da árvore */
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin: 20px 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #4CAF50; /* Verde para o botão */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.gallery-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px; /* Espaçamento entre as imagens */
+}
+
+.gallery {
+    padding: 50px 20px;
+    background-color: #f0f0f0;
+}
+
+.gallery h2 {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.gallery-images img {
+    width: 350px; /* Defina uma largura fixa menor */
+    height: 300px; /* Defina uma altura fixa para manter a proporção */
+    object-fit: cover; /* Cobre o espaço sem distorcer a imagem */
+    transition: transform 0.2s;
+    border-radius: 10px; /* Bordas arredondadas para um visual mais suave */
+}
+
+.gallery-images img:hover {
+    transform: scale(1.1); /* Efeito de destaque ao passar o mouse */
+}
+
+.importance {
+    padding: 50px 20px;
+    background-color: #f0f0f0; /* Cor de fundo clara para a seção */
+    color: #34495e; /* Cor do texto */
+    text-align: center;
+}
+
+.importance h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.importance p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.map {
+    padding: 50px 20px;
+    background-color: #f0f0f0; /* Cor de fundo clara para a seção */
+    color: #34495e; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+}
+
+.map-container {
+    margin-top: 20px; /* Espaço acima do iframe */
+}
+
+.map-container iframe {
+    max-width: 100%; /* Responsividade do iframe */
+    border-radius: 10px; /* Cantos arredondados para o iframe */
+}
+
+.contact {
+    background-color: #4CAF50; /* Cor da navbar */
+    color: white; /* Cor do texto */
+    padding: 20px; /* Espaçamento interno */
+    margin-top: 20px; /* Espaço acima da seção */
+    margin-bottom: 0; /* Remove margem inferior */
+    border-radius: 5px; /* Bordas arredondadas, opcional */
+    text-align: center; /* Centraliza o texto */
+}
+
+.contact p {
+    margin: 0; /* Remove margem padrão do parágrafo */
+}
+
+.contact span {
+    display: block; /* Mostra o email como um bloco */
+    color: white; /* Cor do e-mail */
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    margin-top: 10px; /* Espaçamento acima do e-mail */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav {
+        justify-content: flex-start; /* Alinha os itens à esquerda em telas pequenas */
+    }
+    
+    .menu {
+        flex-direction: column; /* Alinha os itens na vertical se necessário */
+        display: none; /* Esconde o menu inicialmente */
+        position: absolute; /* Permite posicionar o menu em relação à navbar */
+        top: 60px; /* Distância do topo da navbar */
+        left: 0;
+        right: 0;
+        background-color: #4CAF50; /* Mesma cor de fundo */
+        padding: 10px 0; /* Espaçamento interno */
+    }
+
+    .navbar-active {
+        display: flex; /* Mostra o menu quando a classe navbar-active é adicionada */
+    }
+}

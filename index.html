@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Plantio de Árvores</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <nav>
+        <div class="navbar-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#importancia">Importância</a></li>
+                <li><a href="#mapa">Mapa</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Tela Inicial -->
+    <div class="hero" id="hero">
+        <img src="assets/images/arvore.png" alt="Árvore">
+        <h1>Plante o Futuro Hoje</h1>
+        <p>Encontre locais na cidade para coletar sementes e comece a plantar árvores que farão a diferença no futuro.</p>
+        <a href="#mapa" class="btn">Explorar Locais de Coleta</a>
+    </div>
+
+    <!-- Seção da Galeria -->
+    <div class="gallery" id="galeria">
+        <h2>Galeria de Plantio</h2>
+        <div class="gallery-images">
+          <img src="https://cdn.pixabay.com/photo/2020/06/19/03/39/garden-5315602_1280.jpg" alt="Plantando árvore 1" class="gallery-item">
+          <img src="https://cdn.pixabay.com/photo/2020/05/24/14/32/plant-5214521_640.jpg" alt="Plantando árvore 2" class="gallery-item">
+          <img src="https://cdn.pixabay.com/photo/2023/06/22/07/13/soil-8080788_640.jpg" alt="Plantando árvore 3" class="gallery-item">
+          <img src="https://cdn.pixabay.com/photo/2021/05/16/07/20/plant-6257392_640.jpg" alt="Plantando árvore 4" class="gallery-item">
+          <img src="https://cdn.pixabay.com/photo/2024/04/05/05/17/child-8676542_640.jpg" alt="Plantando árvore 5" class="gallery-item">
+        </div>
+    </div>
+
+    <!-- Seção da Importância -->
+    <div class="importance" id="importancia">
+        <h2>A Importância do Plantio de Árvores</h2>
+        <p>A crise climática é um dos maiores desafios que enfrentamos atualmente. O aumento das temperaturas, a elevação do nível do mar e os eventos climáticos extremos são algumas das consequências das atividades humanas e do desmatamento.</p>
+        <p>As árvores desempenham um papel fundamental na luta contra a crise climática. Elas absorvem dióxido de carbono (CO2) da atmosfera, ajudam a purificar o ar, fornecem sombra e contribuem para a biodiversidade ao oferecer habitat para diversas espécies.</p>
+        <p>Com o plantio de árvores, podemos reverter parte dos danos causados ao meio ambiente. Além de combater as emissões de gases de efeito estufa, as árvores ajudam a manter o solo estável, prevenindo erosão e melhorando a qualidade da água.</p>
+        <p>Este projeto visa incentivar o plantio de árvores em nossa cidade. Ao coletar sementes e plantar novas árvores, estamos contribuindo para um futuro mais sustentável e saudável. Junte-se a nós nesta iniciativa e faça a diferença!</p>
+    </div>
+
+    <!-- Seção do Mapa -->
+    <div class="map" id="mapa">
+        <h2>Mapa de Locais de Coleta</h2>
+        <p>Veja no mapa onde você pode coletar sementes de árvores para plantar.</p>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/d/u/0/embed?mid=1Lb0rjC3gwKdiHA0dkbljbZGecMImUqc&ehbc=2E312F&noprof=1" 
+                width="640" 
+                height="480" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Seção de Contato -->
+    <section class="contact" id="contato">
+      <h2>Contato</h2>
+      <p>Para mais informações, entre em contato:</p>
+      <p>oviniciusbalbino@gmail.com</p>
+    </section>
+
+    <script>
+        // Função para alternar o menu
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('navbar-active'); // Alterna a classe para mostrar ou esconder o menu
+        }
+
+        // Adicionando evento de clique aos itens da navbar para fechar o menu colapsável
+        const navLinks = document.querySelectorAll('nav ul li a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                const menu = document.querySelector('.menu');
+                menu.classList.remove('navbar-active'); // Fecha o menu ao clicar em um link
+            });
+        });
+    </script>
+</body>
+</html>
